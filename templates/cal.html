@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cal.css') }}">
+</head>
+<body>
+    <h1 id="heading">Simple Calculator</h1>
+   <div id="flexx">
+    <div id="container">
+    <form action="{{ url_for('calc') }}" method="post">
+        <input type="number" name="no1" placeholder="0" id="tp1">
+        <input type="number" name="no2" placeholder="0" id="tp2">
+        
+
+    
+       <button type="submit" value="add"  name="operation" id="b1">+</button>
+       <button type="submit" value="sub"  name="operation" id="b2">-</button>
+       <button type="submit" value="mul"  name="operation" id="b3">*</button>
+       <button type="submit" value="div"  name="operation" id="b4">/</button>
+        </div>
+
+        <div id="result">
+        {%if answero %}
+            <p id="result">{{ answero }}</p>
+        {% endif %}
+        </div>
+
+    </form>
+    </div>
+
+
+
+
+
+    </div>
+</body>
+</html>
