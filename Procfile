@@ -1,1 +1,1 @@
-web:python cal.py
+web: python cal.py
